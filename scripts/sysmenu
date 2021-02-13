@@ -2,13 +2,7 @@
 
 # Custom Rofi Script
 
-BORDER="#1F1F1F"
-SEPARATOR="#1F1F1F"
-FOREGROUND="#FFFFFF"
-BACKGROUND="#1F1F1F"
-BACKGROUND_ALT="#252525"
-HIGHLIGHT_BACKGROUND="#00897b"
-HIGHLIGHT_FOREGROUND="#1F1F1F"
+
 
 BLACK="#000000"
 WHITE="#ffffff"
@@ -18,7 +12,7 @@ YELLOW="#fdd835"
 BLUE="#1e88e5"
 MAGENTA="#00897b"
 CYAN="#00acc1"
-PINK="#d81b60"
+PINK="#f37ef9"
 PURPLE="#8e24aa"
 INDIGO="#3949ab"
 TEAL="#00897b"
@@ -33,6 +27,14 @@ DEEP_ORANGE="#f4511e"
 LIGHT_BLUE="#039be5"
 LIGHT_GREEN="#7cb342"
 
+BORDER="#1F1F1F"
+SEPARATOR="#1F1F1F"
+FOREGROUND="#FFFFFF"
+BACKGROUND="#1F1F1F"
+BACKGROUND_ALT="#252525"
+HIGHLIGHT_BACKGROUND="#f37ef9"
+HIGHLIGHT_FOREGROUND="#1F1F1F"
+
 # Launch Rofi
 MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -hide-scrollbar true \
@@ -40,12 +42,12 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -lines 4 \
 -line-padding 10 \
 -padding 20 \
--width 15 \
+-width 30 \
 -xoffset -68 -yoffset -70 \
 -location 5 \
 -columns 1 \
 -show-icons -icon-theme "Papirus" \
--font "Fantasque Sans Mono 10" \
+-font "JetBrainsMonoMedium Nerd Font 20" \
 -color-enabled true \
 -color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
@@ -53,8 +55,8 @@ MENU="$(rofi -no-lazy-grab -sep "|" -dmenu -i -p 'System :' \
 -color-urgent "$BACKGROUND,$YELLOW,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
 <<< "  Lock|  Logout|  Reboot|  Shutdown")"
 case "$MENU" in
-  *Lock) i3lock ;;
-  *Logout) openbox --exit;;
+  *Lock) betterlockscreen -l ;;
+  *Logout) i3exit logout;;
   *Reboot) systemctl reboot ;;
   *Shutdown) systemctl -i poweroff
 esac

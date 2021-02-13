@@ -7,7 +7,7 @@ SEPARATOR="#1F1F1F"
 FOREGROUND="#FFFFFF"
 BACKGROUND="#1F1F1F"
 BACKGROUND_ALT="#252525"
-HIGHLIGHT_BACKGROUND="#00897b"
+HIGHLIGHT_BACKGROUND="#f37ef9"
 HIGHLIGHT_FOREGROUND="#1F1F1F"
 
 BLACK="#000000"
@@ -18,7 +18,7 @@ YELLOW="#fdd835"
 BLUE="#1e88e5"
 MAGENTA="#00897b"
 CYAN="#00acc1"
-PINK="#d81b60"
+PINK="#f37ef9"
 PURPLE="#8e24aa"
 INDIGO="#3949ab"
 TEAL="#00897b"
@@ -47,7 +47,7 @@ rofi -no-lazy-grab -show drun \
 -fullscreen \
 -columns 4 \
 -show-icons -icon-theme "Papirus" \
--font "Fantasque Sans Mono 10" \
+-font "JetBrainsMonoMedium Nerd Font 30" \
 -color-enabled true \
 -color-window "$BACKGROUND,$BORDER,$SEPARATOR" \
 -color-normal "$BACKGROUND_ALT,$FOREGROUND,$BACKGROUND_ALT,$HIGHLIGHT_BACKGROUND,$HIGHLIGHT_FOREGROUND" \
